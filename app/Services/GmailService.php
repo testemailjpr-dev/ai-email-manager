@@ -82,7 +82,18 @@ class GmailService
 		$messages = [];
 		if ( !$this->account )
 			return $messages;
-	
+
+		// Ensure "Uncategorized" category exists for this user
+		$category = Category::firstOrCreate(
+			[
+				'user_id' => $user->id,
+				'name' => 'Uncategorized',
+			],
+			[
+				'description' => 'Emails without a detected category.',
+			]
+		);
+
 		if ($messagesResponse->getMessages()) {
 			foreach ($messagesResponse->getMessages() as $msg) {
 				$messageId = $msg->getId();
@@ -130,6 +141,8 @@ class GmailService
 					'body' => $body,
 					'summary' => null, // pending
 					'created_at'=> $parsedDate ?? now(),
+					'category_id' => $category->id,
+					'summary' => null, // pending
 				]);
 	
 				// Dispatch background processing
