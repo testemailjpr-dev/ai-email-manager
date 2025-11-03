@@ -43,8 +43,11 @@ class EmailController extends Controller
 			if ($action === 'delete') {
 				if (count($emailsGrouped)) {
 					foreach ($emailsGrouped as $account_id => $emails) {
-						$gmailIds = $emails->pluck('gmail_id')->toArray();
-				
+						$gmailIds = array();
+						foreach ($emails as $email) {
+							$gmailIds[] = $email['gmail_id'];
+						}
+
 						// Initialize Gmail service for that account
 						$gmailService = new GmailService($account_id);
 				
