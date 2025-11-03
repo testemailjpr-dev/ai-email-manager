@@ -1,0 +1,174 @@
+/* public/css/styles.css */
+
+body {
+    background-color: #f8f9fa; /* light grey */
+}
+
+.navbar {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+    background-color: #4f46e5; /* indigo */
+    border-color: #4f46e5;
+}
+
+.btn-primary:hover {
+    background-color: #4338ca;
+    border-color: #4338ca;
+}
+
+.card {
+    border-radius: 1rem;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+/* --- Two Column Layout Enhancements --- */
+
+.category-list {
+    max-width: 100%;
+}
+
+.category-form {
+    background: #fff;
+    border: 1px solid #e3e6ef;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+    .category-form {
+        margin-top: 2rem;
+    }
+}
+
+/* --- Category Form Styles --- */
+
+.category-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.category-form label {
+    font-weight: 600;
+    color: #333;
+}
+
+.category-form .form-control {
+    border-radius: 0.75rem;
+    border: 1px solid #ced4da;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.03);
+    transition: all 0.2s ease;
+}
+
+.category-form .form-control:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 0.2rem rgba(79, 70, 229, 0.25);
+}
+
+.category-form textarea {
+    resize: vertical;
+}
+
+.category-form button {
+    display: inline-flex;
+    align-items: center;
+	justify-content: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1.4rem;
+    font-weight: 500;
+    border-radius: 0.75rem;
+}
+
+.category-form button i {
+    font-size: 1rem;
+}
+/* --- Category List Styles --- */
+
+.category-list {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.category-item {
+    background: #fff;
+    border: 1px solid #e3e6ef;
+    border-radius: 1rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.category-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.category-item .category-name {
+    color: #4f46e5;
+    font-weight: 600;
+}
+
+.category-item .category-name:hover {
+    text-decoration: underline;
+    color: #4338ca;
+}
+
+.category-item .btn-group .btn {
+    border-radius: 0.5rem;
+    padding: 0.3rem 0.75rem;
+}
+
+.category-item .btn-warning {
+    color: #fff;
+    background-color: #f59e0b;
+    border-color: #f59e0b;
+	border-top-right-radius: 0.5rem !important;
+	border-bottom-right-radius: 0.5rem !important;
+	margin-right: 10px;
+}
+
+.category-item .btn-warning:hover {
+    background-color: #d97706;
+    border-color: #d97706;
+}
+
+.category-item .btn-danger {
+    background-color: #dc2626;
+    border-color: #dc2626;
+}
+
+.category-item .btn-danger:hover {
+    background-color: #b91c1c;
+    border-color: #b91c1c;
+}
+
+.bt-pagination nav > div {
+	flex: unset !important;
+	flex-flow: wrap;
+	justify-content: center !important;
+	align-items: center !important;
+}
+
+.bt-pagination nav > div > div {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+table.table thead th {
+	background: lightgray;
+}
+
+.email-checkbox, #selectAll {
+	border: 1px solid;
+}
+
+.show-email h4 {
+	text-align: left;
+	font-style: normal;
+}
